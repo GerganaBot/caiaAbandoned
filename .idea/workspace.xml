@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Initial project functionalities - apps, urls, views, base template">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Initial project functionalities after create user fails">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/register-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/register-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669564769110</updated>
       <workItem from="1669564800790" duration="14727000" />
-      <workItem from="1669916714593" duration="4848000" />
+      <workItem from="1669916714593" duration="6791000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -110,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669573277722</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Initial project functionalities after create user fails">
+      <created>1669921674461</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1669921674461</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Initial project functionalities after create user fails">
+      <created>1669921687965</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1669921687965</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +139,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add gitignore" />
     <MESSAGE value="Initial project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial project" />
+    <MESSAGE value="Initial project functionalities after create user fails" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial project functionalities after create user fails" />
   </component>
 </project>
