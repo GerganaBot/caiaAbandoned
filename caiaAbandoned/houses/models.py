@@ -25,7 +25,7 @@ class House(models.Model):
     square_meters = models.PositiveIntegerField()
     floors_number = models.PositiveIntegerField()
     construction_date = models.DateField()
-    is_near_parking = models.BooleanField(default=False)
+    is_near_parking = models.BooleanField()
     is_near_park = models.BooleanField()
     is_near_metro = models.BooleanField()
     date_of_publication = models.DateField()

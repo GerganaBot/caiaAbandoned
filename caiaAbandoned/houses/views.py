@@ -21,3 +21,8 @@ def houses_list(request):
         'all_houses': all_houses
     }
     return render(request, template_name='houses/houses-list.html', context=context)
+
+
+def my_houses(request):
+    return render(request, template_name='houses/my-houses-page.html')
+
