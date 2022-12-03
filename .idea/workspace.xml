@@ -1,17 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Added slug configuration for House Objects">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented Houses List and House Details logic">
+      <change afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/houses-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/houses-list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1669564769110</updated>
       <workItem from="1669564800790" duration="14727000" />
-      <workItem from="1669916714593" duration="17468000" />
+      <workItem from="1669916714593" duration="19742000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -140,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669925467560</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implemented Houses List and House Details logic">
+      <created>1670092726222</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1670092726222</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +168,7 @@
     <MESSAGE value="Initial project functionalities after create user fails" />
     <MESSAGE value="Created Houses and Locations Models" />
     <MESSAGE value="Added slug configuration for House Objects" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added slug configuration for House Objects" />
+    <MESSAGE value="Implemented Houses List and House Details logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Houses List and House Details logic" />
   </component>
 </project>

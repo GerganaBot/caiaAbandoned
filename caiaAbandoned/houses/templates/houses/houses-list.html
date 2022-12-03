@@ -3,9 +3,9 @@
 
     {% for house in all_houses %}
         <div class="card" style="width: 18rem;">
-            <img src="{{ house.house_photo }}" class="card-img-top" alt="{{ house.house_location }}">
+            <img src="{{ house.house_photo }}" class="card-img-top">
             <div class="card-body">
-                <h5 class="card-title">{{ house.street }}</h5>
+                <h5 class="card-title">Street {{ house.street }}, {{ house.house_location }}</h5>
                 <p class="card-text">{{ house.description }}</p>
                 <a href="{% url 'house-details' house.slug %}" class="btn btn-primary">House Details</a>
             </div>

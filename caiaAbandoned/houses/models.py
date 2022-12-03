@@ -22,6 +22,13 @@ class House(models.Model):
     street_number = models.PositiveIntegerField()
     description = models.TextField(max_length=300, blank=True, null=True)
     slug = models.SlugField(unique=True, editable=False)
+    square_meters = models.PositiveIntegerField()
+    floors_number = models.PositiveIntegerField()
+    construction_date = models.DateField()
+    is_near_parking = models.BooleanField(default=False)
+    is_near_park = models.BooleanField()
+    is_near_metro = models.BooleanField()
+    date_of_publication = models.DateField()
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
