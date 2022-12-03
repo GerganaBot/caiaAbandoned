@@ -1,6 +1,12 @@
 {% extends 'base.html' %} 
-{% block content %} 
+{% block content %}
 
+
+    <div class="image">  <img src="{{ house.house_photo }}" alt="img8"></div>
+        <h5 class="card-title">Location: {{ house.house_location }}</h5>
+        <h5 class="card-title">Street: {{ house.street }}</h5>
+        <h5 class="card-title">Street number: {{ house.street_number }}</h5>
+        <p class="card-text">Description: {{ house.description }}</p>
 
 
 {% endblock %}

@@ -1,6 +1,15 @@
-{% extends 'base.html' %} 
-{% block content %} 
+{% extends 'base.html' %}
+{% block content %}
 
-
+    {% for house in all_houses %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ house.house_photo }}" class="card-img-top" alt="{{ house.house_location }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ house.street }}</h5>
+                <p class="card-text">{{ house.description }}</p>
+                <a href="{% url 'house-details' house.slug %}" class="btn btn-primary">House Details</a>
+            </div>
+        </div>
+    {% endfor %}
 
 {% endblock %}

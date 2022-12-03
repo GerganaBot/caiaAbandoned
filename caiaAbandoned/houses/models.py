@@ -2,14 +2,17 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 LOCATIONS = [
-    ('Center', 'Sofia Center'),
-    ('Neighbourhood', 'Sofia Neighbourhood'),
-    ('Municipality', 'Sofia Municipality')
+    ('Sofia Center', 'Sofia Center'),
+    ('Sofia Neighbourhood', 'Sofia Neighbourhood'),
+    ('Sofia Municipality', 'Sofia Municipality')
 ]
 
 
 class Location(models.Model):
     location = models.CharField(max_length=40, choices=LOCATIONS)
+
+    def __str__(self):
+        return self.location
 
 
 class House(models.Model):
@@ -23,8 +26,11 @@ class House(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         if not self.slug:
-            self.slug = slugify(f"{self.street}-{self.id}")
+            self.slug = slugify(f"{self.street}-{self.street_number}")
         return super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.street
 
 
 
