@@ -1,10 +1,15 @@
-from django.shortcuts import render
-
+from django.shortcuts import render, redirect
+from caiaAbandoned.houses.forms import HouseForm
 from caiaAbandoned.houses.models import House
 
 
 def add_house(request):
-    return render(request, template_name='houses/house-add-page.html')
+    form = HouseForm(request.POST or None)
+    if form.is_valid():
+        form.save()
+        return redirect('houses-list')
+    context = {'form': form}
+    return render(request, template_name='houses/house-add-page.html', context=context)
 
 
 def show_house_details(request, slug):
