@@ -7,5 +7,6 @@ urlpatterns = [
     path('house/<slug:slug>/', include([
         path('housedetails', views.show_house_details, name='house-details'),
         path('myhouses/', views.my_houses, name='my-houses-page'),
+        path('edit/', views.edit_house, name='edit-house-page'),
     ]))
     ]
