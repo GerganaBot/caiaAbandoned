@@ -1,6 +1,10 @@
 {% extends 'base.html' %} 
-{% block content %} 
+{% block content %}
 
+
+    <div class="image">  <img src="{{ project.building_type_photo }}" alt="img8"></div>
+        <h5 class="card-title">Project Type: {{ project.project_type }}</h5>
+        <p class="card-text">Description: {{ project.description }}</p>
 
 
 {% endblock %}

@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Added pages my-houses, my-projects and add-project">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Adjusted Boolean fields in the house details template">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-list-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-list-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,6 +95,7 @@
       <updated>1669564769110</updated>
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
+      <workItem from="1670172335202" duration="3404000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -146,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670095231033</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adjusted Boolean fields in the house details template">
+      <created>1670108559771</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670108559771</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +185,7 @@
     <MESSAGE value="Added slug configuration for House Objects" />
     <MESSAGE value="Implemented Houses List and House Details logic" />
     <MESSAGE value="Implemented more house details attributes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented more house details attributes" />
+    <MESSAGE value="Adjusted Boolean fields in the house details template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adjusted Boolean fields in the house details template" />
   </component>
 </project>

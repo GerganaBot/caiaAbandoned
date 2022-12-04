@@ -1,6 +1,14 @@
-{% extends 'base.html' %} 
-{% block content %} 
+{% extends 'base.html' %}
+{% block content %}
 
-
+    {% for project in all_projects %}
+        <div class="card" style="width: 18rem;">
+            <img src="{{ project.building_type_photo }}" class="card-img-top">
+            <div class="card-body">
+                <p class="card-text">{{ project.description }}</p>
+                <a href="" class="btn btn-primary">Project Details</a>
+            </div>
+        </div>
+    {% endfor %}
 
 {% endblock %}

@@ -30,6 +30,9 @@ class House(models.Model):
     is_near_metro = models.BooleanField()
     date_of_publication = models.DateField()
 
+    class Meta:
+        ordering = ['-date_of_publication']
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         if not self.slug:
