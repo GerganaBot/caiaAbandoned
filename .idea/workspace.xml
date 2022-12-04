@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Created Project and ProjectType models and a projects-list template">
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-list-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-list-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/urls.py" afterDir="false" />
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented project details template">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/about-us.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +89,7 @@
       <updated>1669564769110</updated>
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
-      <workItem from="1670172335202" duration="3941000" />
+      <workItem from="1670172335202" duration="6399000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -162,7 +161,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670175843226</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Implemented project details template">
+      <created>1670176373337</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670176373337</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -189,6 +195,7 @@
     <MESSAGE value="Implemented more house details attributes" />
     <MESSAGE value="Adjusted Boolean fields in the house details template" />
     <MESSAGE value="Created Project and ProjectType models and a projects-list template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created Project and ProjectType models and a projects-list template" />
+    <MESSAGE value="Implemented project details template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented project details template" />
   </component>
 </project>
