@@ -6,7 +6,7 @@
             <img src="{{ project.building_type_photo }}" class="card-img-top">
             <div class="card-body">
                 <p class="card-text">{{ project.description }}</p>
-                <a href="" class="btn btn-primary">Project Details</a>
+                <a href="{% url 'project-details' project.slug %}" class="btn btn-primary">Project Details</a>
             </div>
         </div>
     {% endfor %}

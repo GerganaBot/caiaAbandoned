@@ -4,6 +4,8 @@ from caiaAbandoned.houses import views
 urlpatterns = [
     path('addhouse/', views.add_house, name='house-add'),
     path('houseslist/', views.houses_list, name='houses-list'),
-    path('housedetails<slug:slug>', views.show_house_details, name='house-details'),
-    path('myhouses/', views.my_houses, name='my-houses-page'),
+    path('house/<slug:slug>/', include([
+        path('housedetails', views.show_house_details, name='house-details'),
+        path('myhouses/', views.my_houses, name='my-houses-page'),
+    ]))
     ]
