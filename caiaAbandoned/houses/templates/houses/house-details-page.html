@@ -14,6 +14,8 @@
         <h5 class="card-title">Metro nearby: {% if house.is_near_metro is True %}yes{% else %}no{% endif %}</h5>
         <h5 class="card-title">Publication date: {{ house.date_of_publication }}</h5>
         <p class="card-text">Description: {{ house.description }}</p>
+        <a href="{% url 'edit-house-page' house.slug %}" class="btn btn-primary">Edit House</a>
+        <a href="{% url 'delete-house-page' house.slug %}" class="btn btn-primary">Delete House</a>
 
 
 
