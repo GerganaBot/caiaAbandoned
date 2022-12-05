@@ -1,6 +1,12 @@
-{% extends 'base.html' %} 
-{% block content %} 
+{% extends 'base.html' %}
+{% block content %}
 
+   <h2>Delete Project</h2>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="delete-btn" type="submit">Delete</button>
+    </form>
 
 
 {% endblock %}

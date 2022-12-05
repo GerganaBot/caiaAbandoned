@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented House Delete and House Edit buttons in House Details template">
-      <change afterPath="$PROJECT_DIR$/caiaAbandoned/projects/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/delete-project-page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/edit-project-page.html" afterDir="false" />
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented Edit Project form and template">
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/delete-project-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/delete-project-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" afterDir="false" />
     </list>
@@ -92,7 +90,7 @@
       <updated>1669564769110</updated>
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
-      <workItem from="1670172335202" duration="18204000" />
+      <workItem from="1670172335202" duration="18706000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -220,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670258554113</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Implemented Edit Project form and template">
+      <created>1670259647506</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670259647506</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -255,6 +260,7 @@
     <MESSAGE value="Adjusted About Us template" />
     <MESSAGE value="Implemented House Delete logic" />
     <MESSAGE value="Implemented House Delete and House Edit buttons in House Details template" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented House Delete and House Edit buttons in House Details template" />
+    <MESSAGE value="Implemented Edit Project form and template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Edit Project form and template" />
   </component>
 </project>

@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 
-from caiaAbandoned.projects.forms import ProjectForm
+from caiaAbandoned.projects.forms import ProjectForm, ProjectDeleteForm
 from caiaAbandoned.projects.models import Project
 
 
@@ -40,4 +40,15 @@ def edit_project(request, slug):
     context = {'form': form}
 
     return render(request, template_name='projects/edit-project-page.html', context=context)
+
+
+def delete_project(request, slug):
+    project = Project.objects.get(slug=slug)
+    if request.method == "POST":
+        project.delete()
+        return redirect('projects-list')
+    form = ProjectDeleteForm(initial=project.__dict__)
+    context = {'form': form}
+
+    return render(request, template_name='projects/delete-project-page.html', context=context)
 
