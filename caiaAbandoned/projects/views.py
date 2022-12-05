@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
+from caiaAbandoned.projects.forms import ProjectForm
 from caiaAbandoned.projects.models import Project
 
 
@@ -25,4 +26,18 @@ def add_project(request):
 
 def my_projects(request):
     return render(request, template_name='projects/my-projects-page.html')
+
+
+def edit_project(request, slug):
+    project = Project.objects.get(slug=slug)
+    if request.method == "GET":
+        form = ProjectForm(instance=project, initial=project.__dict__)
+    else:
+        form = ProjectForm(request.POST, instance=project)
+        if form.is_valid():
+            form.save()
+            return redirect('project-details', slug)
+    context = {'form': form}
+
+    return render(request, template_name='projects/edit-project-page.html', context=context)
 
