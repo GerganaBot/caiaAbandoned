@@ -27,3 +27,12 @@ class HouseForm(forms.ModelForm):
             'is_near_metro': 'Near metro:',
         }
 
+
+class HouseDeleteForm(HouseForm):
+    def __int__(self, *args, **kwargs):
+        super().__init__(self, *args, **kwargs)
+        for (_, field) in self.fields.items():
+            field.widget.attrs['disabled'] = 'disabled'
+            field.widget.attrs['readonly'] = 'readonly'
+
+

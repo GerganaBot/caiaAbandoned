@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from caiaAbandoned.houses.forms import HouseForm
+from caiaAbandoned.houses.forms import HouseForm, HouseDeleteForm
 from caiaAbandoned.houses.models import House
 
 
@@ -45,3 +45,13 @@ def edit_house(request, slug):
 
     return render(request, template_name='houses/edit-house-page.html', context=context)
 
+
+def delete_house(request, slug):
+    house = House.objects.get(slug=slug)
+    if request.method == "POST":
+        house.delete()
+        return redirect('houses-list')
+    form = HouseDeleteForm(initial=house.__dict__)
+    context = {'form': form}
+
+    return render(request, template_name='houses/delete-house-page.html', context=context)
