@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-
-  <form class="searchbar" method="post">
-       {% csrf_token %}
-       {{ search_form }}
-  </form>
-
-{% endblock %}

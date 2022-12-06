@@ -5,7 +5,7 @@ class SearchForm(forms.Form):
     street = forms.CharField(
         widget=forms.TextInput(
             attrs={
-                'placeholder': 'Search by house location...'
+                'placeholder': 'Search by street name...'
             }
         )
     )
