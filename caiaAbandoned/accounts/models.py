@@ -9,15 +9,13 @@ GENDER = [
 
 
 class CaiaAbandonedUser(AbstractUser):
-    username = models.CharField(max_length=30, unique=True)
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=30)
     profile_picture = models.URLField()
     gender = models.CharField(max_length=12, choices=GENDER)
 
-    def __str__(self):
-        return self.username
+
 
 
 

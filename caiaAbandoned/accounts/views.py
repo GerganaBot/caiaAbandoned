@@ -1,16 +1,31 @@
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.models import User
-from django.urls import reverse_lazy
-from django.views import generic as views
-from django.shortcuts import render
+from django.contrib import messages
+from django.contrib.auth import authenticate
+from django.shortcuts import render, redirect
+
+from caiaAbandoned.accounts.forms import CaiaUserCreateForm
 
 
 def login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = authenticate(request, username=username, password=password)
     return render(request, template_name='accounts/login-page.html')
 
 
 def register(request):
-    return render(request, template_name='accounts/register-page.html')
+    form = CaiaUserCreateForm()
+
+    if request.method == "POST":
+        form = CaiaUserCreateForm(request.POST)
+        if form.is_valid():
+            form.save()
+            user = form.cleaned_data.get('username')
+            messages.success(request, 'Profile was successfully created for' + user)
+            return redirect('login')
+    context = {'form': form}
+    return render(request, template_name='accounts/register-page.html', context=context)
 
 
 def show_profile_details(request):
