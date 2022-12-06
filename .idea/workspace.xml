@@ -1,10 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Search moved to the home page">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Home page design done">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/migrations/0002_delete_caiaabandoneduser.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/about-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/home-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/migrations/0002_alter_house_options.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/migrations/0002_alter_projecttype_type_of_project.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
@@ -92,7 +103,7 @@
       <updated>1669564769110</updated>
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
-      <workItem from="1670172335202" duration="29522000" />
+      <workItem from="1670172335202" duration="32720000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -255,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670321378752</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Home page design done">
+      <created>1670324129937</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670324129937</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,6 +313,7 @@
     <MESSAGE value="Implemented Delete and Edit buttons in the project details template" />
     <MESSAGE value="Implemented search bar logic without template visualisation" />
     <MESSAGE value="Search moved to the home page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search moved to the home page" />
+    <MESSAGE value="Home page design done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Home page design done" />
   </component>
 </project>

@@ -4,10 +4,12 @@ from django.template.defaultfilters import slugify
 PROJECTS = [
     ('Residential building', 'Residential building'),
     ('Multifamily building', 'Multifamily building'),
-    ('Office building', 'Office building'),
+    ('Co-working space', 'Co-working space'),
     ('Retail building', 'Retail building'),
     ('Industrial building', 'Industrial building'),
     ('Hotel', 'Hotel'),
+    ('City garden', 'City garden'),
+    ('Urban farm', 'Urban farm'),
     ('Non-Governmental Organisation', 'Non-Governmental Organisation')
 ]
 

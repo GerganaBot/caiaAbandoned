@@ -18,6 +18,7 @@ class Location(models.Model):
 class House(models.Model):
     house_location = models.ForeignKey(to=Location, on_delete=models.CASCADE)
     house_photo = models.URLField()
+    zone_name = models.CharField(max_length=50)
     street = models.CharField(max_length=50)
     street_number = models.PositiveIntegerField()
     description = models.TextField(max_length=300, blank=True, null=True)
