@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented search bar logic without template visualisation">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Search moved to the home page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/about-us.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/home-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/search-page.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,7 +92,7 @@
       <updated>1669564769110</updated>
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
-      <workItem from="1670172335202" duration="26755000" />
+      <workItem from="1670172335202" duration="29522000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -250,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670277985942</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Search moved to the home page">
+      <created>1670321378752</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670321378752</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,6 +294,7 @@
     <MESSAGE value="Implemented Delete Project form and template" />
     <MESSAGE value="Implemented Delete and Edit buttons in the project details template" />
     <MESSAGE value="Implemented search bar logic without template visualisation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented search bar logic without template visualisation" />
+    <MESSAGE value="Search moved to the home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Search moved to the home page" />
   </component>
 </project>
