@@ -9,4 +9,4 @@ class UserAdmin(admin.ModelAdmin):
 
 admin.site.register(CaiaAbandonedUser, UserAdmin)
 
-# 9AeX6nr6zLLDdi
+
