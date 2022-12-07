@@ -24,5 +24,5 @@ urlpatterns = [
     path('accounts/', include('caiaAbandoned.accounts.urls')),
     path('houses/', include('caiaAbandoned.houses.urls')),
     path('projects/', include('caiaAbandoned.projects.urls')),
-
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

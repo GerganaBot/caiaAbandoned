@@ -1,10 +1,12 @@
 from django.contrib import messages
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.views import LoginView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 
-from caiaAbandoned.accounts.forms import CaiaUserCreateForm
+from caiaAbandoned.accounts.forms import CaiaUserCreateForm, CaiaLoginForm
+
+UserModel = get_user_model()
 
 
 def register(request):
@@ -21,19 +23,8 @@ def register(request):
     return render(request, template_name='accounts/register-page.html', context=context)
 
 
-def login_view(request):
-    # form = CaiaLoginForm()
-    if request.method == 'POST':
-        username = request.POST.get('username')
-        password = request.POST.get('password')
-
-        user = authenticate(request, username='username', password='password')
-
-        if user is not None:
-            login(request, user)
-            return redirect('home-page')
-    context = {}
-    return render(request, template_name='accounts/login-page.html', context=context)
+class SignInView(LoginView):
+    template_name = 'accounts/login-page.html'
 
 
 def show_profile_details(request):

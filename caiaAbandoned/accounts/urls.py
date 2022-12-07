@@ -3,7 +3,7 @@ from caiaAbandoned.accounts import views
 
 urlpatterns = [
     path('register/', views.register, name='register'),
-    path('login/', views.login_view, name='login'),
+    path('login/', views.SignInView.as_view(), name='login'),
     path('profile/<int:pk>/', include([
         path('', views.show_profile_details, name='profile-details'),
         path('edit/', views.edit_profile, name='profile-edit'),

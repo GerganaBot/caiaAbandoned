@@ -9,12 +9,12 @@ class CaiaUserCreateForm(UserCreationForm):
         fields = ('username', 'email', 'password1', 'password2')
 
 
-# class CaiaLoginForm(AuthenticationForm):
-#     username = UsernameField(widget=forms.TextInput(attrs={'autofocus': True, 'placeholder': 'Username'}))
-#     password = forms.CharField(
-#         strip=False,
-#         widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'placeholder': 'Password'})
-#     )
+class CaiaLoginForm(AuthenticationForm):
+    username = UsernameField(widget=forms.TextInput(attrs={'autofocus': True, 'placeholder': 'Username'}))
+    password = forms.CharField(
+        strip=False,
+        widget=forms.PasswordInput(attrs={'autocomplete': 'current-password', 'placeholder': 'Password'})
+    )
 
 
 
