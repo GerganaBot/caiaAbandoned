@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Login functionality done, without redirection page ready">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Login functionality done, with redirection page ready">
+      <change afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/logout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/login-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/login-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/register-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/register-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670415569218</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Login functionality done, with redirection page ready">
+      <created>1670428162598</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670428162598</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -299,7 +303,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add gitignore" />
     <MESSAGE value="Initial project" />
     <MESSAGE value="Initial project functionalities after create user fails" />
     <MESSAGE value="Created Houses and Locations Models" />
@@ -324,6 +327,7 @@
     <MESSAGE value="Home page design done" />
     <MESSAGE value="Registration functionality done, without redirection page ready" />
     <MESSAGE value="Login functionality done, without redirection page ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="Login functionality done, without redirection page ready" />
+    <MESSAGE value="Login functionality done, with redirection page ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="Login functionality done, with redirection page ready" />
   </component>
 </project>

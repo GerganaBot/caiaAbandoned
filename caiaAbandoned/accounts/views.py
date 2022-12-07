@@ -1,6 +1,6 @@
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model
-from django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 
@@ -25,6 +25,10 @@ def register(request):
 
 class SignInView(LoginView):
     template_name = 'accounts/login-page.html'
+
+
+class SignOutView(LogoutView):
+    next_page = reverse_lazy('login')
 
 
 def show_profile_details(request):
