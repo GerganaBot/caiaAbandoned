@@ -6,7 +6,9 @@ from caiaAbandoned.houses.models import House
 def add_house(request):
     form = HouseForm(request.POST or None)
     if form.is_valid():
-        form.save()
+        house = form.save(commit=False)
+        house.user = request.user
+        house.save()
         return redirect('houses-list')
     context = {'form': form}
     return render(request, template_name='houses/house-add-page.html', context=context)

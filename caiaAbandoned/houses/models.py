@@ -1,5 +1,10 @@
+from django.contrib.auth import get_user_model
 from django.db import models
 from django.template.defaultfilters import slugify
+
+
+UserModel = get_user_model()
+
 
 LOCATIONS = [
     ('Sofia Center', 'Sofia Center'),
@@ -30,6 +35,7 @@ class House(models.Model):
     is_near_park = models.BooleanField()
     is_near_metro = models.BooleanField()
     date_of_publication = models.DateField()
+    user = models.ForeignKey(to=UserModel, on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['-date_of_publication']

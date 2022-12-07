@@ -21,7 +21,14 @@ def projects_list(request):
 
 
 def add_project(request):
-    return render(request, template_name='projects/add-project-page.html')
+    form = ProjectForm(request.POST or None)
+    if form.is_valid():
+        project = form.save(commit=False)
+        project.user = request.user
+        project.save()
+        return redirect('projects-list')
+    context = {'form': form}
+    return render(request, template_name='projects/add-project-page.html', context=context)
 
 
 def my_projects(request):
