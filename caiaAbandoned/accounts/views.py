@@ -3,8 +3,9 @@ from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+from django.views.generic import UpdateView
 
-from caiaAbandoned.accounts.forms import CaiaUserCreateForm, CaiaLoginForm
+from caiaAbandoned.accounts.forms import CaiaUserCreateForm, CaiaLoginForm, CaiaUserEditForm
 
 UserModel = get_user_model()
 
@@ -35,8 +36,13 @@ def show_profile_details(request):
     return render(request, template_name='accounts/profile-details-page.html')
 
 
-def edit_profile(request):
-    return render(request, template_name='accounts/profile-edit-page.html')
+class UserEditView(UpdateView):
+    model = UserModel
+    form_class = CaiaUserEditForm
+    template_name = 'accounts/profile-edit-page.html'
+
+    def get_success_url(self):
+        return reverse_lazy('profile-details', kwargs={'pk': self.object.pk})
 
 
 def delete_profile(request):
