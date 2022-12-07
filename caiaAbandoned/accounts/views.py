@@ -1,9 +1,10 @@
+from django import views
 from django.contrib import messages
 from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import UpdateView
+from django.views.generic import UpdateView, DetailView
 
 from caiaAbandoned.accounts.forms import CaiaUserCreateForm, CaiaLoginForm, CaiaUserEditForm
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
@@ -31,8 +32,13 @@ class SignOutView(LogoutView):
     next_page = reverse_lazy('login')
 
 
-def show_profile_details(request):
-    return render(request, template_name='accounts/profile-details-page.html')
+class UserDetailsView(DetailView):
+    model = CaiaAbandonedUser
+    template_name = 'accounts/profile-details-page.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
 class UserEditView(UpdateView):
