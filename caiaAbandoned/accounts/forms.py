@@ -3,12 +3,10 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm, UsernameField
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
 
-UserModel = get_user_model()
-
 
 class CaiaUserCreateForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
-        model = UserModel
+        model = CaiaAbandonedUser
         fields = ('username', 'email', 'password1', 'password2')
 
 
@@ -22,7 +20,7 @@ class CaiaLoginForm(AuthenticationForm):
 
 class CaiaUserEditForm(forms.ModelForm):
     class Meta:
-        model = UserModel
+        model = CaiaAbandonedUser
         fields = ('username', 'first_name', 'last_name', 'email', 'profile_picture', 'gender')
         exclude = ('password',)
         labels = {

@@ -35,7 +35,7 @@ def my_projects(request):
     return render(request, template_name='projects/my-projects-page.html')
 
 
-def edit_project(request, slug):
+def edit_project(request, username, slug):
     project = Project.objects.get(slug=slug)
     if request.method == "GET":
         form = ProjectForm(instance=project, initial=project.__dict__)
@@ -43,13 +43,13 @@ def edit_project(request, slug):
         form = ProjectForm(request.POST, instance=project)
         if form.is_valid():
             form.save()
-            return redirect('project-details', slug)
+            return redirect('project-details', username, slug)
     context = {'form': form}
 
     return render(request, template_name='projects/edit-project-page.html', context=context)
 
 
-def delete_project(request, slug):
+def delete_project(request, username, slug):
     project = Project.objects.get(slug=slug)
     if request.method == "POST":
         project.delete()

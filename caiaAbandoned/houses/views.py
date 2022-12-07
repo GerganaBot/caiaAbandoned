@@ -34,7 +34,7 @@ def my_houses(request):
     return render(request, template_name='houses/my-houses-page.html')
 
 
-def edit_house(request, slug):
+def edit_house(request, username, slug):
     house = House.objects.get(slug=slug)
     if request.method == "GET":
         form = HouseForm(instance=house, initial=house.__dict__)
@@ -42,13 +42,13 @@ def edit_house(request, slug):
         form = HouseForm(request.POST, instance=house)
         if form.is_valid():
             form.save()
-            return redirect('house-details', slug)
+            return redirect('house-details', username, slug)
     context = {'form': form}
 
     return render(request, template_name='houses/edit-house-page.html', context=context)
 
 
-def delete_house(request, slug):
+def delete_house(request, username, slug):
     house = House.objects.get(slug=slug)
     if request.method == "POST":
         house.delete()

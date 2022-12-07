@@ -2,9 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 from django.template.defaultfilters import slugify
 
-
-UserModel = get_user_model()
-
+from caiaAbandoned.accounts.models import CaiaAbandonedUser
 
 PROJECTS = [
     ('Residential building', 'Residential building'),
@@ -31,7 +29,7 @@ class Project(models.Model):
     building_type_photo = models.URLField()
     description = models.TextField(max_length=300, blank=True, null=True)
     slug = models.SlugField(unique=True, editable=False)
-    user = models.ForeignKey(to=UserModel, on_delete=models.CASCADE)
+    user = models.ForeignKey(to=CaiaAbandonedUser, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)

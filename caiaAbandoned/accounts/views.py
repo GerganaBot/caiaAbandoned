@@ -6,8 +6,7 @@ from django.urls import reverse_lazy
 from django.views.generic import UpdateView
 
 from caiaAbandoned.accounts.forms import CaiaUserCreateForm, CaiaLoginForm, CaiaUserEditForm
-
-UserModel = get_user_model()
+from caiaAbandoned.accounts.models import CaiaAbandonedUser
 
 
 def register(request):
@@ -37,7 +36,7 @@ def show_profile_details(request):
 
 
 class UserEditView(UpdateView):
-    model = UserModel
+    model = CaiaAbandonedUser
     form_class = CaiaUserEditForm
     template_name = 'accounts/profile-edit-page.html'
 
