@@ -18,8 +18,12 @@ def add_house(request):
 
 def show_house_details(request, slug):
     house = House.objects.get(slug=slug)
+    owner = None
+    if request.user.is_authenticated:
+        owner = CaiaAbandonedUser.objects.get(username=request.user.username)
     context = {
         'house': house,
+        'owner': owner,
     }
     return render(request, template_name='houses/house-details-page.html', context=context)
 
@@ -41,7 +45,7 @@ def my_houses(request, slug):
     return render(request, template_name='houses/my-houses-page.html', context=context)
 
 
-def edit_house(request, username, slug):
+def edit_house(request, slug):
     house = House.objects.get(slug=slug)
     if request.method == "GET":
         form = HouseForm(instance=house, initial=house.__dict__)
@@ -49,13 +53,13 @@ def edit_house(request, username, slug):
         form = HouseForm(request.POST, instance=house)
         if form.is_valid():
             form.save()
-            return redirect('house-details', username, slug)
+            return redirect('house-details', slug)
     context = {'form': form}
 
     return render(request, template_name='houses/edit-house-page.html', context=context)
 
 
-def delete_house(request, username, slug):
+def delete_house(request, slug):
     house = House.objects.get(slug=slug)
     if request.method == "POST":
         house.delete()

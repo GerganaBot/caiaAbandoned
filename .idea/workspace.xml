@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented profile details template with edit profile functionality">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented my houses and my projects when user is logged in">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-details-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/my-houses-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/my-houses-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/my-projects-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/my-projects-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +94,7 @@
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
       <workItem from="1670172335202" duration="32720000" />
-      <workItem from="1670432455528" duration="12944000" />
+      <workItem from="1670432455528" duration="16168000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -324,7 +320,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670443671338</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Implemented my houses and my projects when user is logged in">
+      <created>1670510191880</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1670510191880</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +345,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented more house details attributes" />
     <MESSAGE value="Adjusted Boolean fields in the house details template" />
     <MESSAGE value="Created Project and ProjectType models and a projects-list template" />
     <MESSAGE value="Implemented project details template" />
@@ -367,17 +369,7 @@
     <MESSAGE value="Add house and add project views edited with user model logic" />
     <MESSAGE value="When a user creates a house or a project they automatically add to the model, implemented" />
     <MESSAGE value="Implemented profile details template with edit profile functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented profile details template with edit profile functionality" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/caiaAbandoned/houses/views.py</url>
-          <line>35</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Implemented my houses and my projects when user is logged in" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented my houses and my projects when user is logged in" />
   </component>
 </project>

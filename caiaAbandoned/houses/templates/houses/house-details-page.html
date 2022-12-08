@@ -1,23 +1,23 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 
 
-    <div class="image">  <img src="{{ house.house_photo }}" alt="img8"></div>
-        <h5 class="card-title">Location: {{ house.house_location }}</h5>
-        <h5 class="card-title">Street: {{ house.street }}</h5>
-        <h5 class="card-title">Street number: {{ house.street_number }}</h5>
-        <h5 class="card-title">Square meters: {{ house.square_meters }}</h5>
-        <h5 class="card-title">Floors number: {{ house.floors_number }}</h5>
-        <h5 class="card-title">Construction date: {{ house.construction_date }}</h5>
-        <h5 class="card-title">Parking nearby: {% if house.is_near_parking is True %}yes{% else %}no{% endif %}</h5>
-        <h5 class="card-title">Park nearby: {% if house.is_near_park is True %}yes{% else %}no{% endif %}</h5>
-        <h5 class="card-title">Metro nearby: {% if house.is_near_metro is True %}yes{% else %}no{% endif %}</h5>
-        <h5 class="card-title">Publication date: {{ house.date_of_publication }}</h5>
-        <p class="card-text">Description: {{ house.description }}</p>
-        {% if owner == request.user %}
-        <a href="{% url 'edit-house-page' owner.username house.slug %}" class="btn btn-primary">Edit House</a>
-        <a href="{% url 'delete-house-page' owner.username house.slug %}" class="btn btn-primary">Delete House</a>
-        {% endif %}
+    <div class="image"><img src="{{ house.house_photo }}" alt="img8"></div>
+    <h5 class="card-title">Location: {{ house.house_location }}</h5>
+    <h5 class="card-title">Street: {{ house.street }}</h5>
+    <h5 class="card-title">Street number: {{ house.street_number }}</h5>
+    <h5 class="card-title">Square meters: {{ house.square_meters }}</h5>
+    <h5 class="card-title">Floors number: {{ house.floors_number }}</h5>
+    <h5 class="card-title">Construction date: {{ house.construction_date }}</h5>
+    <h5 class="card-title">Parking nearby: {% if house.is_near_parking is True %}yes{% else %}no{% endif %}</h5>
+    <h5 class="card-title">Park nearby: {% if house.is_near_park is True %}yes{% else %}no{% endif %}</h5>
+    <h5 class="card-title">Metro nearby: {% if house.is_near_metro is True %}yes{% else %}no{% endif %}</h5>
+    <h5 class="card-title">Publication date: {{ house.date_of_publication }}</h5>
+    <p class="card-text">Description: {{ house.description }}</p>
+    {% if owner == request.user %}
+        <a href="{% url 'edit-house-page' house.slug %}" class="btn btn-primary">Edit House</a>
+        <a href="{% url 'delete-house-page' house.slug %}" class="btn btn-primary">Delete House</a>
+    {% endif %}
 
 
 {% endblock %}
