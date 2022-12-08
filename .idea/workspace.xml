@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Added Possible projects for a house functionality">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented delete user button">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/logout.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-delete-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-delete-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +93,7 @@
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
       <workItem from="1670172335202" duration="32720000" />
-      <workItem from="1670432455528" duration="26445000" />
+      <workItem from="1670432455528" duration="27132000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -356,7 +354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670523367337</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Implemented delete user button">
+      <created>1670531770965</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1670531770965</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -374,7 +379,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added Add House form" />
     <MESSAGE value="Improved the UI of Add House form" />
     <MESSAGE value="Implemented Edit House logic and template" />
     <MESSAGE value="Adjusted About Us template" />
@@ -399,6 +403,7 @@
     <MESSAGE value="Implemented Add project button to house details template and my projects view" />
     <MESSAGE value="House and Project tables connected" />
     <MESSAGE value="Added Possible projects for a house functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Possible projects for a house functionality" />
+    <MESSAGE value="Implemented delete user button" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented delete user button" />
   </component>
 </project>

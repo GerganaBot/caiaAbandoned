@@ -1,6 +1,3 @@
-from django import views
-from django.contrib import messages
-from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
@@ -18,7 +15,6 @@ def register(request):
         if form.is_valid():
             form.save()
             user = form.cleaned_data.get('username')
-            messages.success(request, 'Profile was successfully created for' + user)
             return redirect('login')
     context = {'form': form}
     return render(request, template_name='accounts/register-page.html', context=context)
@@ -29,8 +25,7 @@ class SignInView(LoginView):
 
 
 class SignOutView(LogoutView):
-    template_name = 'accounts/logout.html'
-    next_page = reverse_lazy('login')
+    next_page = reverse_lazy('home-page')
 
 
 class UserDetailsView(DetailView):
