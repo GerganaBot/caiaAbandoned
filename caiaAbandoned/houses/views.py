@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+
+from caiaAbandoned.accounts.models import CaiaAbandonedUser
 from caiaAbandoned.houses.forms import HouseForm, HouseDeleteForm
 from caiaAbandoned.houses.models import House
 
@@ -30,8 +32,13 @@ def houses_list(request):
     return render(request, template_name='houses/houses-list.html', context=context)
 
 
-def my_houses(request):
-    return render(request, template_name='houses/my-houses-page.html')
+def my_houses(request, slug):
+    all_houses = House.objects.all()
+    house_is_owned_by_user = all_houses.filter(user=request.user)
+    context = {
+        'all_houses': house_is_owned_by_user
+    }
+    return render(request, template_name='houses/my-houses-page.html', context=context)
 
 
 def edit_house(request, username, slug):

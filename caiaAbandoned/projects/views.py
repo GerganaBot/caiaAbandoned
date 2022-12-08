@@ -1,13 +1,16 @@
 from django.shortcuts import render, redirect
 
+from caiaAbandoned.accounts.models import CaiaAbandonedUser
 from caiaAbandoned.projects.forms import ProjectForm, ProjectDeleteForm
 from caiaAbandoned.projects.models import Project
 
 
-def show_project_details(request, slug):
+def show_project_details(request, username, slug):
     project = Project.objects.get(slug=slug)
+    owner = CaiaAbandonedUser.objects.get(username=username)
     context = {
         'project': project,
+        'owner': owner,
     }
     return render(request, template_name='projects/project-details.html', context=context)
 
@@ -31,7 +34,12 @@ def add_project(request):
     return render(request, template_name='projects/add-project-page.html', context=context)
 
 
-def my_projects(request):
+def my_projects(request, slug):
+    all_projects = Project.objects.all()
+    project_is_owned_by_user = all_projects.filter(user=request.user)
+    context = {
+        'all_houses': project_is_owned_by_user
+    }
     return render(request, template_name='projects/my-projects-page.html')
 
 
