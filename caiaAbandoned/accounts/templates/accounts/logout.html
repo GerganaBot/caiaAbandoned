@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
-
+    <form method="post" action="{% url 'logout' request.user.pk %}">
+        {% csrf_token %}
+    </form>
 
 {% endblock %}

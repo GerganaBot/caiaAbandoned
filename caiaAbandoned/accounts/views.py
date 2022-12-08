@@ -4,7 +4,7 @@ from django.contrib.auth import authenticate, login, get_user_model
 from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
-from django.views.generic import UpdateView, DetailView
+from django.views.generic import UpdateView, DetailView, DeleteView
 
 from caiaAbandoned.accounts.forms import CaiaUserCreateForm, CaiaLoginForm, CaiaUserEditForm
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
@@ -29,6 +29,7 @@ class SignInView(LoginView):
 
 
 class SignOutView(LogoutView):
+    template_name = 'accounts/logout.html'
     next_page = reverse_lazy('login')
 
 
@@ -50,5 +51,7 @@ class UserEditView(UpdateView):
         return reverse_lazy('profile-details', kwargs={'pk': self.object.pk})
 
 
-def delete_profile(request):
-    return render(request, template_name='accounts/profile-delete-page.html')
+class UserDeleteView(DeleteView):
+    model = CaiaAbandonedUser
+    template_name = 'accounts/profile-delete-page.html'
+    success_url = reverse_lazy('home-page')
