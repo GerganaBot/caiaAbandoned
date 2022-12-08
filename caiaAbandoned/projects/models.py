@@ -36,6 +36,6 @@ class Project(models.Model):
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         if not self.slug:
-            self.slug = slugify(f"{self.project_type}-{self.project_type_id}")
+            self.slug = slugify(f"{self.project_type}-{self.id}")
         return super().save(*args, **kwargs)
 

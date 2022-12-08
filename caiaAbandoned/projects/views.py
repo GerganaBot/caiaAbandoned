@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
+from caiaAbandoned.houses.models import House
 from caiaAbandoned.projects.forms import ProjectForm, ProjectDeleteForm
 from caiaAbandoned.projects.models import Project
 
@@ -25,11 +26,13 @@ def projects_list(request):
     return render(request, template_name='projects/project-list-page.html', context=context)
 
 
-def add_project(request):
+def add_project(request, slug):
     form = ProjectForm(request.POST or None)
     if form.is_valid():
         project = form.save(commit=False)
         project.user = request.user
+        house = House.objects.get(slug=slug)
+        project.house = house
         project.save()
         return redirect('projects-list')
     context = {'form': form}

@@ -19,13 +19,14 @@ def add_house(request):
 
 def show_house_details(request, slug):
     house = House.objects.get(slug=slug)
+    projects = Project.objects.all()
     owner = None
-    project = Project.objects.get()
     if request.user.is_authenticated:
         owner = CaiaAbandonedUser.objects.get(username=request.user.username)
     context = {
         'house': house,
         'owner': owner,
+        'projects': projects
     }
     return render(request, template_name='houses/house-details-page.html', context=context)
 

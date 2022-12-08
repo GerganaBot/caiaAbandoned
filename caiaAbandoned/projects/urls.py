@@ -2,7 +2,7 @@ from django.urls import path, include
 from caiaAbandoned.projects import views
 
 urlpatterns = [
-    path('addproject/', views.add_project, name='add-project-page'),
+    path('addproject/<slug:slug>/', views.add_project, name='add-project-page'),
     path('projects/', views.projects_list, name='projects-list'),
     path('project/<slug:slug>/', include([
         path('projectdetails', views.show_project_details, name='project-details'),
