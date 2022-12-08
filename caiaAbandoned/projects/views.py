@@ -5,9 +5,11 @@ from caiaAbandoned.projects.forms import ProjectForm, ProjectDeleteForm
 from caiaAbandoned.projects.models import Project
 
 
-def show_project_details(request, username, slug):
+def show_project_details(request, slug):
     project = Project.objects.get(slug=slug)
-    owner = CaiaAbandonedUser.objects.get(username=username)
+    owner = None
+    if request.user.is_authenticated:
+        owner = CaiaAbandonedUser.objects.get(username=request.user.username)
     context = {
         'project': project,
         'owner': owner,
@@ -43,7 +45,7 @@ def my_projects(request, slug):
     return render(request, template_name='projects/my-projects-page.html', context=context)
 
 
-def edit_project(request, username, slug):
+def edit_project(request, slug):
     project = Project.objects.get(slug=slug)
     if request.method == "GET":
         form = ProjectForm(instance=project, initial=project.__dict__)
@@ -51,13 +53,13 @@ def edit_project(request, username, slug):
         form = ProjectForm(request.POST, instance=project)
         if form.is_valid():
             form.save()
-            return redirect('project-details', username, slug)
+            return redirect('project-details', slug)
     context = {'form': form}
 
     return render(request, template_name='projects/edit-project-page.html', context=context)
 
 
-def delete_project(request, username, slug):
+def delete_project(request, slug):
     project = Project.objects.get(slug=slug)
     if request.method == "POST":
         project.delete()

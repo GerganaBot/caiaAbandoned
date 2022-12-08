@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented my houses edit and delete buttons only when logged in">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented Add project button to house details template and my projects view">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/migrations/0002_alter_caiaabandoneduser_username.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +102,7 @@
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
       <workItem from="1670172335202" duration="32720000" />
-      <workItem from="1670432455528" duration="16816000" />
+      <workItem from="1670432455528" duration="19486000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -333,7 +342,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670513420065</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Implemented Add project button to house details template and my projects view">
+      <created>1670514148658</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1670514148658</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -351,7 +367,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Project and ProjectType models and a projects-list template" />
     <MESSAGE value="Implemented project details template" />
     <MESSAGE value="Implemented about us template" />
     <MESSAGE value="Added Add House form" />
@@ -376,17 +391,7 @@
     <MESSAGE value="Implemented profile details template with edit profile functionality" />
     <MESSAGE value="Implemented my houses and my projects when user is logged in" />
     <MESSAGE value="Implemented my houses edit and delete buttons only when logged in" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented my houses edit and delete buttons only when logged in" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/caiaAbandoned/projects/views.py</url>
-          <line>37</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Implemented Add project button to house details template and my projects view" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implemented Add project button to house details template and my projects view" />
   </component>
 </project>

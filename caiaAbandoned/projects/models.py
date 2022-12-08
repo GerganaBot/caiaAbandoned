@@ -3,6 +3,7 @@ from django.db import models
 from django.template.defaultfilters import slugify
 
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
+from caiaAbandoned.houses.models import House
 
 PROJECTS = [
     ('Residential building', 'Residential building'),
@@ -30,6 +31,7 @@ class Project(models.Model):
     description = models.TextField(max_length=300, blank=True, null=True)
     slug = models.SlugField(unique=True, editable=False)
     user = models.ForeignKey(to=CaiaAbandonedUser, on_delete=models.CASCADE)
+    house = models.ForeignKey(to=House, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)

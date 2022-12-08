@@ -4,6 +4,7 @@ from django.template.defaultfilters import slugify
 
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
 
+
 LOCATIONS = [
     ('Sofia Center', 'Sofia Center'),
     ('Sofia Neighbourhood', 'Sofia Neighbourhood'),
@@ -34,6 +35,7 @@ class House(models.Model):
     is_near_metro = models.BooleanField()
     date_of_publication = models.DateField()
     user = models.ForeignKey(to=CaiaAbandonedUser, on_delete=models.CASCADE)
+
 
     class Meta:
         ordering = ['-date_of_publication']

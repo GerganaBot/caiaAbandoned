@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
 from caiaAbandoned.houses.forms import HouseForm, HouseDeleteForm
 from caiaAbandoned.houses.models import House
+from caiaAbandoned.projects.models import Project
 
 
 def add_house(request):
@@ -19,6 +20,7 @@ def add_house(request):
 def show_house_details(request, slug):
     house = House.objects.get(slug=slug)
     owner = None
+    project = Project.objects.get()
     if request.user.is_authenticated:
         owner = CaiaAbandonedUser.objects.get(username=request.user.username)
     context = {
