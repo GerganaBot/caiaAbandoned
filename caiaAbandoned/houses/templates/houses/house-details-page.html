@@ -17,6 +17,7 @@
     {% if owner == request.user %}
         <a href="{% url 'edit-house-page' house.slug %}" class="btn btn-primary">Edit House</a>
         <a href="{% url 'delete-house-page' house.slug %}" class="btn btn-primary">Delete House</a>
+    <a href="{% url 'add-project-page' %}" class="btn btn-primary">Add a project for this house</a>
     {% endif %}
 
 

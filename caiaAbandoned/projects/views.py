@@ -38,9 +38,9 @@ def my_projects(request, slug):
     all_projects = Project.objects.all()
     project_is_owned_by_user = all_projects.filter(user=request.user)
     context = {
-        'all_houses': project_is_owned_by_user
+        'all_projects': project_is_owned_by_user
     }
-    return render(request, template_name='projects/my-projects-page.html')
+    return render(request, template_name='projects/my-projects-page.html', context=context)
 
 
 def edit_project(request, username, slug):
