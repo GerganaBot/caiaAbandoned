@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
@@ -26,6 +27,7 @@ def projects_list(request):
     return render(request, template_name='projects/project-list-page.html', context=context)
 
 
+@login_required
 def add_project(request, slug):
     form = ProjectForm(request.POST or None)
     if form.is_valid():
@@ -39,6 +41,7 @@ def add_project(request, slug):
     return render(request, template_name='projects/add-project-page.html', context=context)
 
 
+@login_required
 def my_projects(request, slug):
     all_projects = Project.objects.all()
     project_is_owned_by_user = all_projects.filter(user=request.user)
@@ -48,6 +51,7 @@ def my_projects(request, slug):
     return render(request, template_name='projects/my-projects-page.html', context=context)
 
 
+@login_required
 def edit_project(request, slug):
     project = Project.objects.get(slug=slug)
     if request.method == "GET":
@@ -62,6 +66,7 @@ def edit_project(request, slug):
     return render(request, template_name='projects/edit-project-page.html', context=context)
 
 
+@login_required
 def delete_project(request, slug):
     project = Project.objects.get(slug=slug)
     if request.method == "POST":

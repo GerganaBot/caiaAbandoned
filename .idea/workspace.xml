@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented delete user button">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Repaired Sign out button to redirect to home page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +97,7 @@
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
       <workItem from="1670172335202" duration="32720000" />
-      <workItem from="1670432455528" duration="27132000" />
+      <workItem from="1670432455528" duration="31153000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -361,7 +365,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670531770965</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Repaired Sign out button to redirect to home page">
+      <created>1670532621653</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1670532621653</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -379,7 +390,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Improved the UI of Add House form" />
     <MESSAGE value="Implemented Edit House logic and template" />
     <MESSAGE value="Adjusted About Us template" />
     <MESSAGE value="Implemented House Delete logic" />
@@ -404,6 +414,7 @@
     <MESSAGE value="House and Project tables connected" />
     <MESSAGE value="Added Possible projects for a house functionality" />
     <MESSAGE value="Implemented delete user button" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented delete user button" />
+    <MESSAGE value="Repaired Sign out button to redirect to home page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Repaired Sign out button to redirect to home page" />
   </component>
 </project>

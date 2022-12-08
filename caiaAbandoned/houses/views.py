@@ -1,3 +1,5 @@
+from django.contrib.auth.decorators import login_required
+from django.http import Http404
 from django.shortcuts import render, redirect
 
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
@@ -6,6 +8,7 @@ from caiaAbandoned.houses.models import House
 from caiaAbandoned.projects.models import Project
 
 
+@login_required
 def add_house(request):
     form = HouseForm(request.POST or None)
     if form.is_valid():
@@ -39,6 +42,7 @@ def houses_list(request):
     return render(request, template_name='houses/houses-list.html', context=context)
 
 
+@login_required
 def my_houses(request, slug):
     all_houses = House.objects.all()
     house_is_owned_by_user = all_houses.filter(user=request.user)
@@ -48,6 +52,7 @@ def my_houses(request, slug):
     return render(request, template_name='houses/my-houses-page.html', context=context)
 
 
+@login_required
 def edit_house(request, slug):
     house = House.objects.get(slug=slug)
     if request.method == "GET":
@@ -62,6 +67,7 @@ def edit_house(request, slug):
     return render(request, template_name='houses/edit-house-page.html', context=context)
 
 
+@login_required
 def delete_house(request, slug):
     house = House.objects.get(slug=slug)
     if request.method == "POST":
