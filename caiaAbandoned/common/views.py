@@ -12,7 +12,7 @@ def home_page(request):
         search_form = SearchForm(request.POST)
         if search_form.is_valid():
             all_locations = all_locations.filter(
-                street__icontains=search_form.cleaned_data['street'])
+                zone_name__icontains=search_form.cleaned_data['zone_name'])
             context = {
                 'all_houses': all_locations
             }

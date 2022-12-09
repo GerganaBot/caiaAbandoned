@@ -5,11 +5,12 @@ from caiaAbandoned.houses.models import House
 class HouseForm(forms.ModelForm):
     class Meta:
         model = House
-        fields = ['house_location', 'house_photo', 'street', 'street_number', 'description', 'square_meters',
+        fields = ['house_location', 'house_photo', 'zone_name', 'street', 'street_number', 'description', 'square_meters',
                   'floors_number', 'construction_date', 'is_near_parking', 'is_near_park', 'is_near_metro', 'date_of_publication']
         widgets = {
             'house_location': forms.RadioSelect(),
             'house_photo': forms.TextInput(attrs={'placeholder': 'Link to image'}),
+            'zone_name': forms.TextInput(attrs={'placeholder': 'Zone/neighbourhood/town name'}),
             'street': forms.TextInput(attrs={'placeholder': 'Street'}),
             'street_number': forms.NumberInput(attrs={'placeholder': 'Street number'}),
             'description': forms.Textarea(attrs={'placeholder': 'Description'}),
