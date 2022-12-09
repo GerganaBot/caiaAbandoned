@@ -1,14 +1,16 @@
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.http import Http404
+from django.shortcuts import render, redirect, get_object_or_404
 
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
+from caiaAbandoned.common.utils import is_owner
 from caiaAbandoned.houses.models import House
 from caiaAbandoned.projects.forms import ProjectForm, ProjectDeleteForm
 from caiaAbandoned.projects.models import Project
 
 
 def show_project_details(request, slug):
-    project = Project.objects.get(slug=slug)
+    project = get_object_or_404(Project, slug=slug)
     owner = None
     if request.user.is_authenticated:
         owner = CaiaAbandonedUser.objects.get(username=request.user.username)
@@ -53,7 +55,9 @@ def my_projects(request, slug):
 
 @login_required
 def edit_project(request, slug):
-    project = Project.objects.get(slug=slug)
+    project = get_object_or_404(Project, slug=slug)
+    if not is_owner(request, project):
+        return redirect('project-details', slug=slug)
     if request.method == "GET":
         form = ProjectForm(instance=project, initial=project.__dict__)
     else:
@@ -68,7 +72,13 @@ def edit_project(request, slug):
 
 @login_required
 def delete_project(request, slug):
-    project = Project.objects.get(slug=slug)
+    try:
+        project = Project.objects.get(slug=slug)
+    except Project.DoesNotExist:
+        raise Http404("No project matches the given query.")
+
+    if not is_owner(request, project):
+        return redirect('project-details', slug=slug)
     if request.method == "POST":
         project.delete()
         return redirect('projects-list')

@@ -1,8 +1,9 @@
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
+from caiaAbandoned.common.utils import is_owner
 from caiaAbandoned.houses.forms import HouseForm, HouseDeleteForm
 from caiaAbandoned.houses.models import House
 from caiaAbandoned.projects.models import Project
@@ -21,15 +22,17 @@ def add_house(request):
 
 
 def show_house_details(request, slug):
-    house = House.objects.get(slug=slug)
+    house = get_object_or_404(House, slug=slug)
     projects = Project.objects.all()
+    project_is_of_the_house = projects.filter(house=house)
     owner = None
     if request.user.is_authenticated:
         owner = CaiaAbandonedUser.objects.get(username=request.user.username)
+
     context = {
         'house': house,
         'owner': owner,
-        'projects': projects
+        'projects': project_is_of_the_house
     }
     return render(request, template_name='houses/house-details-page.html', context=context)
 
@@ -54,7 +57,9 @@ def my_houses(request, slug):
 
 @login_required
 def edit_house(request, slug):
-    house = House.objects.get(slug=slug)
+    house = get_object_or_404(House, slug=slug)
+    if not is_owner(request, house):
+        return redirect('house-details', slug=slug)
     if request.method == "GET":
         form = HouseForm(instance=house, initial=house.__dict__)
     else:
@@ -69,7 +74,13 @@ def edit_house(request, slug):
 
 @login_required
 def delete_house(request, slug):
-    house = House.objects.get(slug=slug)
+    try:
+        house = House.objects.get(slug=slug)
+    except House.DoesNotExist:
+        raise Http404("No house matches the given query.")
+
+    if not is_owner(request, house):
+        return redirect('house-details', slug=slug)
     if request.method == "POST":
         house.delete()
         return redirect('houses-list')

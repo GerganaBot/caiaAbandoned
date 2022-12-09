@@ -2,7 +2,6 @@ from django.contrib.auth.views import LoginView, LogoutView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import UpdateView, DetailView, DeleteView
-
 from caiaAbandoned.accounts.forms import CaiaUserCreateForm, CaiaUserEditForm
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
 
