@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Done admin fields filtering">
-      <change afterPath="$PROJECT_DIR$/caiaAbandoned/common/utils.py" afterDir="false" />
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="page 404.html customized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/houses-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/houses-list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +94,7 @@
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
       <workItem from="1670172335202" duration="32720000" />
-      <workItem from="1670432455528" duration="51277000" />
+      <workItem from="1670432455528" duration="52855000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -387,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670585913655</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="page 404.html customized">
+      <created>1670616053097</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1670616053097</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -405,7 +408,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented House Delete logic" />
     <MESSAGE value="Implemented House Delete and House Edit buttons in House Details template" />
     <MESSAGE value="Implemented Edit Project form and template" />
     <MESSAGE value="Implemented Delete Project form and template" />
@@ -430,6 +432,7 @@
     <MESSAGE value="Repaired Sign out button to redirect to home page" />
     <MESSAGE value="Added @login_required decorator" />
     <MESSAGE value="Done admin fields filtering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Done admin fields filtering" />
+    <MESSAGE value="page 404.html customized" />
+    <option name="LAST_COMMIT_MESSAGE" value="page 404.html customized" />
   </component>
 </project>

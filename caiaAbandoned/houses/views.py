@@ -1,6 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.http import Http404
 from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic import ListView
 
 from caiaAbandoned.accounts.models import CaiaAbandonedUser
 from caiaAbandoned.common.utils import is_owner
@@ -37,12 +38,13 @@ def show_house_details(request, slug):
     return render(request, template_name='houses/house-details-page.html', context=context)
 
 
-def houses_list(request):
-    all_houses = House.objects.all()
-    context = {
-        'all_houses': all_houses
-    }
-    return render(request, template_name='houses/houses-list.html', context=context)
+class HousesList(ListView):
+    model = House
+    template_name = 'houses/houses-list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
 
 
 @login_required
