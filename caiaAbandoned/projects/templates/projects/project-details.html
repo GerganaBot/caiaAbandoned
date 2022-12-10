@@ -9,8 +9,8 @@
     <h5 class="card-title">Project Type: <b>{{ project.project_type }}</b></h5>
     <p class="card-text">Description: {{ project.description }}</p>
     {% if owner == request.user %}
-        <a href="{% url 'edit-project-page' project.slug %}" class="btn btn-primary">Edit Project</a>
-        <a href="{% url 'delete-project-page' project.slug %}" class="btn btn-primary">Delete Project</a>
+        <a href="{% url 'edit-project-page' project.slug %}" class="btn btn-info">Edit Project</a>
+        <a href="{% url 'delete-project-page' project.slug %}" class="btn btn-info">Delete Project</a>
     {% endif %}
 
 

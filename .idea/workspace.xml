@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Implemented Class Based View for houses list">
+    <list default="true" id="ca19b2f8-af35-4211-b0fc-b4238e06f73a" name="Changes" comment="Little template adjustments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-details-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/about-us.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/about-us.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/home-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/common/templates/common/home-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-delete-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-delete-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-edit-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/accounts/templates/accounts/profile-edit-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/delete-house-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/delete-house-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/edit-house-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/edit-house-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-add-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-add-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/house-details-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/houses-list.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/houses-list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/my-houses-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/houses/templates/houses/my-houses-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/add-project-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/add-project-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/delete-project-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/delete-project-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/edit-project-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/edit-project-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/my-projects-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/my-projects-page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-details.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-details.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-list-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/templates/projects/project-list-page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/caiaAbandoned/projects/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,7 @@
       <workItem from="1669564800790" duration="14727000" />
       <workItem from="1669916714593" duration="21862000" />
       <workItem from="1670172335202" duration="32720000" />
-      <workItem from="1670432455528" duration="69025000" />
+      <workItem from="1670432455528" duration="71363000" />
     </task>
     <task id="LOCAL-00001" summary="Add gitignore">
       <created>1669573260679</created>
@@ -405,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670617766702</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Little template adjustments">
+      <created>1670704437493</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1670704437493</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -423,7 +433,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Implemented Edit Project form and template" />
     <MESSAGE value="Implemented Delete Project form and template" />
     <MESSAGE value="Implemented Delete and Edit buttons in the project details template" />
     <MESSAGE value="Implemented search bar logic without template visualisation" />
@@ -448,6 +457,7 @@
     <MESSAGE value="Done admin fields filtering" />
     <MESSAGE value="page 404.html customized" />
     <MESSAGE value="Implemented Class Based View for houses list" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented Class Based View for houses list" />
+    <MESSAGE value="Little template adjustments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Little template adjustments" />
   </component>
 </project>

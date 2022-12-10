@@ -3,7 +3,7 @@
 
     <div class="container text-center">
         <div class="row">
-        <h1 class="card-title"><b>Projects</b></h1>
+            <h1 class="card-title"><b>Projects</b></h1>
             {% for project in all_projects %}
                 <div class="col">
                     <div class="card" style="background-color: turquoise">
@@ -11,7 +11,7 @@
                         <div class="card-body">
                             <h5 class="card-title"><b>{{ project.project_type }}</b></h5>
                             <p class="card-text">{{ project.description }}</p>
-                            <a href="{% url 'project-details' project.slug %}" class="btn btn-primary">Project
+                            <a href="{% url 'project-details' project.slug %}" class="btn btn-info">Project
                                 Details</a>
                         </div>
                     </div>

@@ -20,9 +20,9 @@
             <h5 class="card-title">Publication date: <b>{{ house.date_of_publication }}</b></h5>
             <p class="card-text">Description: {{ house.description }}</p>
             {% if owner == request.user %}
-                <a href="{% url 'edit-house-page' house.slug %}" class="btn btn-primary">Edit House</a>
-                <a href="{% url 'delete-house-page' house.slug %}" class="btn btn-primary">Delete House</a>
-                <a href="{% url 'add-project-page' house.slug %}" class="btn btn-primary">Add a project for this
+                <a href="{% url 'edit-house-page' house.slug %}" class="btn btn-info">Edit House</a>
+                <a href="{% url 'delete-house-page' house.slug %}" class="btn btn-info">Delete House</a>
+                <a href="{% url 'add-project-page' house.slug %}" class="btn btn-info">Add a project for this
                     house</a>
             {% endif %}
         </div>
