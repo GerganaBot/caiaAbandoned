@@ -1,34 +1,51 @@
 {% extends 'base.html' %}
 {% block content %}
 
-    <div class="profile">
-        <!-- Start Profile Personal Data Section -->
-        <div class="profile-data">
-            <div class="profile_img">
-                <div class="image">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col">
+                <h1 class="card-title">{{ user.first_name }} {{ user.last_name }}</h1>
+                <img src="{{ user.profile_picture }}" alt="">
 
-                    <!-- Profile Image -->
-                    <img src="{{ user.profile_picture }}" alt="img8">
-                </div>
-            </div>
-            <div class="personal">
-                <div class="edit">
-                    <!-- User Username -->
-                    <p>{{ user.first_name }} {{ user.last_name }}</p>
-
-                    <!-- Link to Edit Profile Page -->
-                    <a href="{% url 'profile-edit' user.pk %}"> Edit Profile</a>
-
-                    <!-- Link to Delete Profile Page -->
-                    <a href="{% url 'profile-delete' user.pk %}"> Delete Profile</a>
-
-
-                </div>
-                <div class="data">
-                    <a href="{% url 'my-houses-page' user.pk %}"> My Houses</a>
-                        <a href="{% url 'my-projects-page' user.pk %}"> My Projects </a>
-                </div>
             </div>
         </div>
+         <div class="row">
+            <div class="col">
+
+
+                <!-- Link to Edit Profile Page -->
+                <a href="{% url 'profile-edit' user.pk %}">
+                    <img class="edit-img"
+                         src="https://plos.org/wp-content/uploads/2020/08/Example-why-editing-matters_1-maginfy-eye.png"
+                         width="50"
+                         height="50"
+                         alt="edit button">Edit Profile
+                </a>
+
+                <!-- Link to Delete Profile Page -->
+                <a href="{% url 'profile-delete' user.pk %}">
+                    <img class="edit-img" src="https://cdn-icons-png.flaticon.com/512/3100/3100733.png"
+                         width="50"
+                         height="50"
+                         alt="edit button">Delete Profile
+                </a>
+
+
+            </div>
+            <div class="data">
+                <a href="{% url 'my-houses-page' user.pk %}">
+                    <img class="edit-img" src="https://www.downloadclipart.net/large/real-estate-png-photos.png"
+                         width="50"
+                         height="50"
+                         alt="edit button">My Houses</a>
+                <a href="{% url 'my-projects-page' user.pk %}">
+                    <img class="edit-img" src="https://cdn-icons-png.flaticon.com/128/1430/1430896.png"
+                         width="50"
+                         height="50"
+                         alt="edit button">My projects</a>
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
 {% endblock %}
