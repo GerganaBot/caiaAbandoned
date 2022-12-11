@@ -40,11 +40,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
 
     'caiaAbandoned.common',
     'caiaAbandoned.accounts',
     'caiaAbandoned.houses',
     'caiaAbandoned.projects',
+    'caiaAbandoned.api',
 ]
 
 MIDDLEWARE = [
