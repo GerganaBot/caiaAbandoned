@@ -1,13 +1,13 @@
 from django.urls import path
 
-from caiaAbandoned.api.models import LocationSerializer, ProjectTypeSerializer, ProjectSerializer
+from caiaAbandoned.api.models import LocationSerializer, ProjectTypeSerializer, ProjectSerializer, HouseSerializer
 from caiaAbandoned.api import views
-from caiaAbandoned.houses.models import Location
+from caiaAbandoned.houses.models import Location, House
 from caiaAbandoned.projects.models import ProjectType, Project
 
 urlpatterns = [
-    path('houses/', views.ListHouseView.as_view(), name='houses-all'),
-    path('houses/<int:pk>/', views.HouseDetail.as_view(), name='house-detail'),
+    path('houses/', views.HousesList.as_view(queryset=House.objects.all(), serializer_class=HouseSerializer), name='houses-all'),
+    path('houses/<int:pk>/', views.HouseDetail.as_view(queryset=House.objects.all(), serializer_class=HouseSerializer), name='house-detail'),
     path('project-types/', views.ListProjectTypesView.as_view(queryset=ProjectType.objects.all(), serializer_class=ProjectTypeSerializer), name='project-types-all'),
     path('project-types/<int:pk>/', views.ProjectTypesDetail.as_view(queryset=ProjectType.objects.all(), serializer_class=ProjectTypeSerializer), name='project-types-detail'),
     path('locations/', views.LocationsList.as_view(queryset=Location.objects.all(), serializer_class=LocationSerializer), name='locations-all'),
