@@ -52,44 +52,14 @@ class HouseDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-class ListProjectTypesView(APIView):
-    def get(self, request):
-        houses = ProjectType.objects.all()
-        serializer = ProjectTypeSerializer(houses, many=True)
-        return Response(serializer.data)
-
-    def post(self, request):
-        serializer = ProjectTypeSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+class ListProjectTypesView(ListCreateAPIView):
+    project_type = ProjectType.objects.all()
+    serializer_class = ProjectTypeSerializer
 
 
-class ProjectTypesDetail(APIView):
-    def get_project_type(self, pk):
-        try:
-            return ProjectType.objects.get(pk=pk)
-        except ProjectType.DoesNotExist:
-            raise Http404
-
-    def get(self, request, pk):
-        project_type = self.get_project_type(pk)
-        serializer = ProjectTypeSerializer(project_type)
-        return Response(serializer.data)
-
-    def put(self, request, pk):
-        project_type = self.get_project_type(pk)
-        serializer = ProjectTypeSerializer(project_type, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    def delete(self, request, pk):
-        project_type = self.get_project_type(pk)
-        project_type.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+class ProjectTypesDetail(RetrieveUpdateDestroyAPIView):
+    queryset = ProjectType.objects.all()
+    serializer_class = ProjectTypeSerializer
 
 
 class LocationsList(ListCreateAPIView):
