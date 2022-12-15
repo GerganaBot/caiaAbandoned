@@ -6,9 +6,9 @@ from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIV
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from caiaAbandoned.api.models import HouseSerializer, ProjectTypeSerializer, LocationSerializer
+from caiaAbandoned.api.models import HouseSerializer, ProjectTypeSerializer, LocationSerializer, ProjectSerializer
 from caiaAbandoned.houses.models import House, Location
-from caiaAbandoned.projects.models import ProjectType
+from caiaAbandoned.projects.models import ProjectType, Project
 
 
 class ListHouseView(APIView):
@@ -70,3 +70,13 @@ class LocationsList(ListCreateAPIView):
 class LocationDetail(RetrieveUpdateDestroyAPIView):
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
+
+
+class ProjectsList(ListCreateAPIView):
+    project = Project.objects.all()
+    serializer_class = ProjectSerializer
+
+
+class ProjectDetail(RetrieveUpdateDestroyAPIView):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer

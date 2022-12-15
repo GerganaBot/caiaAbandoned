@@ -34,8 +34,7 @@ class Project(models.Model):
     house = models.ForeignKey(to=House, on_delete=models.CASCADE)
 
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
         if not self.slug:
-            self.slug = slugify(f"{self.project_type}-{self.id}")
-        return super().save(*args, **kwargs)
+            self.slug = slugify(f"{self.project_type}-{self.house.id}")
+        super().save(*args, **kwargs)
 

@@ -2,7 +2,7 @@ from django.db import models
 from rest_framework.serializers import ModelSerializer
 
 from caiaAbandoned.houses.models import House, Location
-from caiaAbandoned.projects.models import ProjectType
+from caiaAbandoned.projects.models import ProjectType, Project
 
 
 class HouseSerializer(ModelSerializer):
@@ -21,3 +21,10 @@ class LocationSerializer(ModelSerializer):
     class Meta:
         model = Location
         fields = '__all__'
+
+
+class ProjectSerializer(ModelSerializer):
+    class Meta:
+        model = Project
+        fields = '__all__'
+
