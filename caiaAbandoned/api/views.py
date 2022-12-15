@@ -1,12 +1,13 @@
 from django.core.exceptions import PermissionDenied
 from django.http import Http404
 from rest_framework import status
+from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from caiaAbandoned.api.models import HouseSerializer, ProjectTypeSerializer
-from caiaAbandoned.houses.models import House
+from caiaAbandoned.api.models import HouseSerializer, ProjectTypeSerializer, LocationSerializer
+from caiaAbandoned.houses.models import House, Location
 from caiaAbandoned.projects.models import ProjectType
 
 
@@ -91,4 +92,11 @@ class ProjectTypesDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
+class LocationsList(ListCreateAPIView):
+    location = Location.objects.all()
+    serializer_class = LocationSerializer
 
+
+class LocationDetail(RetrieveUpdateDestroyAPIView):
+    queryset = Location.objects.all()
+    serializer_class = LocationSerializer
