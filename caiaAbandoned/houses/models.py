@@ -41,10 +41,9 @@ class House(models.Model):
         ordering = ['-date_of_publication']
 
     def save(self, *args, **kwargs):
-        super().save(*args, **kwargs)
         if not self.slug:
             self.slug = slugify(f"{self.street}-{self.street_number}")
-        return super().save(*args, **kwargs)
+        super().save(*args, **kwargs)
 
     def __str__(self):
         return self.street
