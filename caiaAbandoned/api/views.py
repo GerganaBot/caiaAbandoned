@@ -2,7 +2,7 @@ from django.http import Http404
 from rest_framework import status
 
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -13,7 +13,7 @@ from caiaAbandoned.projects.models import ProjectType, Project
 
 
 class ListHouseView(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get(self, request):
         houses = House.objects.all()
@@ -29,7 +29,7 @@ class ListHouseView(APIView):
 
 
 class HouseDetail(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
 
     def get_house(self, pk):
         try:
@@ -57,36 +57,36 @@ class HouseDetail(APIView):
 
 
 class ListProjectTypesView(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     project_type = ProjectType.objects.all()
     serializer_class = ProjectTypeSerializer
 
 
 class ProjectTypesDetail(RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = ProjectType.objects.all()
     serializer_class = ProjectTypeSerializer
 
 
 class LocationsList(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     location = Location.objects.all()
     serializer_class = LocationSerializer
 
 
 class LocationDetail(RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Location.objects.all()
     serializer_class = LocationSerializer
 
 
 class ProjectsList(ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     project = Project.objects.all()
     serializer_class = ProjectSerializer
 
 
 class ProjectDetail(RetrieveUpdateDestroyAPIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAuthenticatedOrReadOnly]
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
