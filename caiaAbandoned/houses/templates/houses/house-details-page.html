@@ -1,41 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="container text-center">
-    <div class="row">
-        <div class="col">
-            <h1 class="card-title"><b>House Details</b></h1>
+        <div class="row">
+            <div class="col">
+                <h1 class="card-title"><b>House Details</b></h1>
 
-            <div class="image"><img src="{{ house.house_photo }}" alt="img8"></div>
-            <h5 class="card-title">Location:<b> {{ house.house_location }}</b> </h5>
-            <h5 class="card-title">Zone:<b> {{ house.zone_name }}</b></h5>
-            <h5 class="card-title">Street:<b> {{ house.street }}</b></h5>
-            <h5 class="card-title">Street number:<b> {{ house.street_number }}</b></h5>
-            <h5 class="card-title">Square meters:<b> {{ house.square_meters }}</b></h5>
-            <h5 class="card-title">Floors number:<b> {{ house.floors_number }}</b></h5>
-            <h5 class="card-title">Construction date:<b> {{ house.construction_date }}</b></h5>
-            <h5 class="card-title">Parking nearby: <b>{% if house.is_near_parking is True %}yes{% else %}
-                no{% endif %}</b></h5>
-            <h5 class="card-title">Park nearby: <b>{% if house.is_near_park is True %}yes{% else %}no{% endif %}</b></h5>
-            <h5 class="card-title">Metro nearby: <b>{% if house.is_near_metro is True %}yes{% else %}no{% endif %}</b></h5>
-            <h5 class="card-title">Publication date: <b>{{ house.date_of_publication }}</b></h5>
-            <p class="card-text">Description: {{ house.description }}</p>
-            {% if owner == request.user %}
-                <a href="{% url 'edit-house-page' house.slug %}" class="btn btn-info">Edit House</a>
-                <a href="{% url 'delete-house-page' house.slug %}" class="btn btn-info">Delete House</a>
-                <a href="{% url 'add-project-page' house.slug %}" class="btn btn-info">Add a project for this house</a>
+                <div class="image"><img src="{{ house.house_photo }}" alt="img8"></div>
+                <h5 class="card-title">Location:<b> {{ house.house_location }}</b></h5>
+                <h5 class="card-title">Zone:<b> {{ house.zone_name }}</b></h5>
+                <h5 class="card-title">Street:<b> {{ house.street }}</b></h5>
+                <h5 class="card-title">Street number:<b> {{ house.street_number }}</b></h5>
+                <h5 class="card-title">Square meters:<b> {{ house.square_meters }}</b></h5>
+                <h5 class="card-title">Floors number:<b> {{ house.floors_number }}</b></h5>
+                <h5 class="card-title">Construction date:<b> {{ house.construction_date }}</b></h5>
+                <h5 class="card-title">Parking nearby: <b>{% if house.is_near_parking is True %}yes{% else %}
+                    no{% endif %}</b></h5>
+                <h5 class="card-title">Park nearby: <b>{% if house.is_near_park is True %}yes{% else %}no{% endif %}</b>
+                </h5>
+                <h5 class="card-title">Metro nearby: <b>{% if house.is_near_metro is True %}yes{% else %}
+                    no{% endif %}</b></h5>
+                <h5 class="card-title">Publication date: <b>{{ house.date_of_publication }}</b></h5>
+                <p class="card-text">Description: {{ house.description }}</p>
+                {% if owner == request.user %}
+                    <a href="{% url 'edit-house-page' house.slug %}" class="btn btn-info">Edit House</a>
+                    <a href="{% url 'delete-house-page' house.slug %}" class="btn btn-info">Delete House</a>
+                    <a href="{% url 'add-project-page' house.slug %}" class="btn btn-info">Add a project for this
+                        house</a>
 
-            {% endif %}
-        </div>
-            <div class="row">
-                <div class="col">
-                        <h1 class="card-title"><b>Possible projects for this house</b></h1>
-                        {% for project in projects %}
-                            <div class="image"><img src="{{ project.building_type_photo }}" alt="img8"></div>
-                            <h5 class="card-title">Project type: <b>{{ project.project_type }}</b></h5>
-                            <h5 class="card-title">Description: {{ project.description }}</h5>
-                        {% endfor %}
-                    </div>
-                </div>
+                {% endif %}
+            </div>
+            <div class="col">
+                <h1 class="card-title"><b>Possible projects for this house</b></h1>
+                {% for project in projects %}
+                    <div class="image"><img src="{{ project.building_type_photo }}" alt="img8"></div>
+                    <h5 class="card-title">Project type: <b>{{ project.project_type }}</b></h5>
+                    <h5 class="card-title">Description: {{ project.description }}</h5>
+                {% endfor %}
             </div>
         </div>
+    </div>
 {% endblock %}
