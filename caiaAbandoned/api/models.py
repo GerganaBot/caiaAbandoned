@@ -9,6 +9,7 @@ class HouseSerializer(ModelSerializer):
     class Meta:
         model = House
         fields = '__all__'
+        read_only_fields = ("user",)
 
 
 class ProjectTypeSerializer(ModelSerializer):
@@ -27,4 +28,5 @@ class ProjectSerializer(ModelSerializer):
     class Meta:
         model = Project
         fields = '__all__'
+        read_only_fields = ("user",)
 
