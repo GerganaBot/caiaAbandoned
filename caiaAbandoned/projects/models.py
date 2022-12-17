@@ -20,7 +20,7 @@ PROJECTS = [
 
 
 class ProjectType(models.Model):
-    type_of_project = models.CharField(max_length=40, choices=PROJECTS)
+    type_of_project = models.CharField(max_length=40, choices=PROJECTS, unique=True)
 
     def __str__(self):
         return self.type_of_project
