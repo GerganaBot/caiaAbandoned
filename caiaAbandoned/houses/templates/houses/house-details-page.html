@@ -5,7 +5,7 @@
             <div class="col">
                 <h1 class="card-title"><b>House Details</b></h1>
 
-                <div class="image"><img src="{{ house.house_photo }}" alt="img8"></div>
+                <div class="image"><img src="{{ house.house_photo }}" alt="img8" style="width: 100%;object-fit: cover;"></div>
                 <h5 class="card-title">Location:<b> {{ house.house_location }}</b></h5>
                 <h5 class="card-title">Zone:<b> {{ house.zone_name }}</b></h5>
                 <h5 class="card-title">Street:<b> {{ house.street }}</b></h5>
@@ -32,7 +32,7 @@
             <div class="col">
                 <h1 class="card-title"><b>Possible projects for this house</b></h1>
                 {% for project in projects %}
-                    <div class="image"><img src="{{ project.building_type_photo }}" alt="img8"></div>
+                    <div class="image"><img src="{{ project.building_type_photo }}" alt="img8" style="width: 100%;object-fit: cover;"></div>
                     <h5 class="card-title">Project type: <b>{{ project.project_type }}</b></h5>
                     <h5 class="card-title">Description: {{ project.description }}</h5>
                 {% endfor %}
