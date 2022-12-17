@@ -1,4 +1,5 @@
-from django.contrib.auth import get_user_model
+
+from django.core.validators import MinLengthValidator, URLValidator, MaxValueValidator, MinValueValidator
 from django.db import models
 from django.template.defaultfilters import slugify
 
@@ -21,14 +22,20 @@ class Location(models.Model):
 
 class House(models.Model):
     house_location = models.ForeignKey(to=Location, on_delete=models.CASCADE)
-    house_photo = models.URLField()
-    zone_name = models.CharField(max_length=50)
-    street = models.CharField(max_length=50)
+    house_photo = models.URLField(validators=(URLValidator(),))
+    zone_name = models.CharField(max_length=50, validators=(MinLengthValidator(3,),))
+    street = models.CharField(max_length=50, validators=(MinLengthValidator(3,),))
     street_number = models.PositiveIntegerField()
     description = models.TextField(max_length=300, blank=True, null=True)
     slug = models.SlugField(unique=True, editable=False)
-    square_meters = models.PositiveIntegerField()
-    floors_number = models.PositiveIntegerField()
+    square_meters = models.PositiveIntegerField(validators=[
+            MaxValueValidator(1000),
+            MinValueValidator(10)
+        ])
+    floors_number = models.PositiveIntegerField(validators=[
+            MaxValueValidator(5),
+            MinValueValidator(1)
+        ])
     construction_date = models.DateField()
     is_near_parking = models.BooleanField()
     is_near_park = models.BooleanField()

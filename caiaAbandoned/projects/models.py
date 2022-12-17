@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.core.validators import URLValidator
 from django.db import models
 from django.template.defaultfilters import slugify
 
@@ -27,7 +28,7 @@ class ProjectType(models.Model):
 
 class Project(models.Model):
     project_type = models.ForeignKey(to=ProjectType, on_delete=models.CASCADE)
-    building_type_photo = models.URLField()
+    building_type_photo = models.URLField(validators=(URLValidator(),))
     description = models.TextField(max_length=300, blank=True, null=True)
     slug = models.SlugField(unique=True, editable=False)
     user = models.ForeignKey(to=CaiaAbandonedUser, on_delete=models.CASCADE)
