@@ -14,7 +14,7 @@ LOCATIONS = [
 
 
 class Location(models.Model):
-    location = models.CharField(max_length=40, choices=LOCATIONS)
+    location = models.CharField(max_length=40, choices=LOCATIONS, unique=True)
 
     def __str__(self):
         return self.location
