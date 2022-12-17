@@ -14,7 +14,7 @@ def home_page(request):
             all_locations = all_locations.filter(
                 zone_name__icontains=search_form.cleaned_data['zone_name'])
             context = {
-                'all_houses': all_locations
+                'object_list': all_locations
             }
             return render(request, template_name='houses/houses-list.html', context=context)
 
